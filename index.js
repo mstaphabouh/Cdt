@@ -181,11 +181,11 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
    var numDisplayed = 0;
    var tocTable = '';
-   var tocHead1 = 'POST TITLE';
-   var tocTool1 = 'Click to sort by title';
-   var tocHead2 = 'POST DATE';
-   var tocTool2 = 'Click to sort by date';
-   var tocHead3 = 'LABELS';
+   var tocHead1 = 'عنوان الموضوع';
+   var tocTool1 = 'ترتيب المواضيع بحسب العنوان';
+   var tocHead2 = 'تاريخ النشر';
+   var tocTool2 = 'ترتيب بحسب تاريخ النشر';
+   var tocHead3 = 'الأقسام';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
       tocTool1 += ' (descending)';
@@ -204,7 +204,7 @@ function displayToc(filter) {
       tocTool2 += ' (oldest first)';
    }
    if (postFilter != '') {
-      tocTool3 = 'Click to show all posts';
+      tocTool3 = 'أنقر لإظهار جميع المواضيع';
    }
    tocTable += '<table>';
    tocTable += '<tr>';
@@ -232,10 +232,10 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<div class="toc-note">Displaying all ' + postTitle.length + ' posts<br/></div>'; }
+      var tocNote = '<div class="toc-note">أمامك ' + postTitle.length + ' موضوعا<br/></div>'; }
    else {
-      var tocNote = '<div class="toc-note">Displaying ' + numDisplayed + ' posts labeled \'';
-      tocNote += postFilter + '\' of '+ postTitle.length + ' posts total<br/></div>';
+      var tocNote = '<div class="toc-note">أمامك ' + numDisplayed + ' موضوعا من قسم  \'';
+      tocNote += postFilter + '\' من '+ postTitle.length + ' موضوعا لدينا<br/></div>';
    }
    tocdiv.innerHTML = tocNote + tocTable;
 } // end of displayToc
@@ -261,12 +261,12 @@ function showToc() {
      var toclink = document.getElementById("toclink");
    
   }
-  else { alert("Just wait... TOC is loading"); }
+  else { alert("إنتظر فقط , جاري تحميل البيانات"); }
 }
 
 function hideToc() {
   var tocdiv = document.getElementById("toc");
   tocdiv.innerHTML = '';
   var toclink = document.getElementById("toclink");
-  toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">» Show Table of Contents</a> <img src="/web/20160130094358/http://chenkaie.blog.googlepages.com/new_1.gif"/>';
+  toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">» إظهار جدول المحتوى</a> <img src="http://chenkaie.blog.googlepages.com/new_1.gif"/>';
 }
