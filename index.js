@@ -188,20 +188,20 @@ function displayToc(filter) {
    var tocHead3 = 'الأقسام';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
-      tocTool1 += ' (descending)';
-      tocTool2 += ' (newest first)';
+      tocTool1 += '';
+      tocTool2 += '';
    }
    if (sortBy == "titledesc") { 
-      tocTool1 += ' (ascending)';
+      tocTool1 += '';
       tocTool2 += ' (newest first)';
    }
    if (sortBy == "dateoldest") { 
-      tocTool1 += ' (ascending)';
-      tocTool2 += ' (newest first)';
+      tocTool1 += '';
+      tocTool2 += ' (الأحدث أولا)';
    }
    if (sortBy == "datenewest") { 
-      tocTool1 += ' (ascending)';
-      tocTool2 += ' (oldest first)';
+      tocTool1 += '';
+      tocTool2 += ' (الأقدم أولا)';
    }
    if (postFilter != '') {
       tocTool3 = 'أنقر لإظهار جميع المواضيع';
