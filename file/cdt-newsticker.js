@@ -14,7 +14,7 @@ feed_url += "feeds/posts/default";
 function recent_post_createEntries(){
     var entries = feed.entry;
     var entriesArr = [];
-    for(var i=0; i<latest_post; i++){
+    for(var i=-0; i<latest_post; i++){
         var entry = entries[i];
         var entryObj = new Object();
         entryObj.title = entry.title.$t;
@@ -58,25 +58,25 @@ function recent_post_style(){
     document.write(s);
 }
 function recent_post_content(){
-    var s = "<div id='recent_post' title='Breaking News'>";
+    var s = "<div id='recent_post' title='جديد المواضيع'>";
     if(info_text){
     s += "<div class='wrapper'>";
     s += "<div class='newstitle'>";
     s += "جديد المدونة";
     s += "</div>";
     }
-    s += "  <marquee style='float:right; margin-right:10px; width:82%' scrollAmount='"+scrolling_speed+"'>";
+    s += "  <marquee style='float:right; margin-right:10px;margin-top: 4px;width:82%' scrollAmount='"+scrolling_speed+"'>";
     for(var i=0; i<latest_post; i++){
         var recent_post_entries = entries[i];
         s += "<a href='"+recent_post_entries.href+"' ";
         s += "onmouseover='this.parentNode.stop()' onmouseout='this.parentNode.start()'";
         s += ">" + recent_post_entries.title + "</a>";
-        if(i != latest_post-1){s += " | ";}
+        if(i != latest_post-1){s += " ■ ";}
     }
     s += "</marquee>";
     s += "</div>";
     if(close_button){
-	s += "<div style='float:left;margin-left:15px;'>";
+	s += "<div style='float:;margin-left:15px;'>";
     s += "<a href='javascript:void(0)' onclick='document.getElementById(\"recent_post\").style.display=\"none\"'>";
     s += "(x)";
     s += "</a>";
