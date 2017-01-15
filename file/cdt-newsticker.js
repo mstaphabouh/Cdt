@@ -14,7 +14,7 @@ feed_url += "feeds/posts/default";
 function recent_post_createEntries(){
     var entries = feed.entry;
     var entriesArr = [];
-    for(var i=-0; i<latest_post; i++){
+    for(var i=0; i<latest_post; i++){
         var entry = entries[i];
         var entryObj = new Object();
         entryObj.title = entry.title.$t;
@@ -65,7 +65,7 @@ function recent_post_content(){
     s += "جديد المدونة";
     s += "</div>";
     }
-    s += "  <marquee style='float:right; margin-right:10px;margin-top: 4px;width:82%' scrollAmount='"+scrolling_speed+"'>";
+    s += "  <marquee style='float:left; margin-right:10px;margin-top: 4px;width:82%' scrollAmount='"+scrolling_speed+"'>";
     for(var i=0; i<latest_post; i++){
         var recent_post_entries = entries[i];
         s += "<a href='"+recent_post_entries.href+"' ";
