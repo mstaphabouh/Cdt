@@ -62,7 +62,7 @@ function recent_post_content(){
     if(info_text){
     s += "<div class='wrapper'>";
     s += "<div class='newstitle'>";
-    s += "جديد!";
+    s += "جديد المدونة";
     s += "</div>";
     }
     s += "  <marquee style='float:right; margin-right:10px; width:82%' scrollAmount='"+scrolling_speed+"'>";
@@ -79,7 +79,7 @@ function recent_post_content(){
 	s += "<div style='float:left;margin-left:15px;'>";
     s += "<a href='javascript:void(0)' onclick='document.getElementById(\"recent_post\").style.display=\"none\"'>";
     s += "(x)";
-    s += "</a> <a href='http://blog4temp.com' title='Translated by CBT soft' style='font-size:8px;'>custom blogger templates</a>";
+    s += "</a>";
     s += "</div>";
     }
     document.write(s);
